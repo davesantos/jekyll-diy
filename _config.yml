@@ -1,0 +1,37 @@
+# Build settings
+# theme: minima
+include:
+markdown: kramdown
+permalink: :year/:title/
+
+# defaults:
+# - scope:
+#     path: ''
+#     type: posts
+#   values:
+#     layout: post
+#     permalink: "/posts/:title/"
+# - scope:
+#     path: ''
+#     type: pages
+#   values:
+#     layout: page
+
+gems:
+  - jekyll-feed
+  - jekyll-sitemap
+
+include:
+  - .htaccess
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README
+  - Rakefile
+  - bower_components
+  - gulpfile.js
+  - modernizr-config.json
+  - node_modules
+  - package.json
