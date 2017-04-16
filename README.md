@@ -1,11 +1,15 @@
 Jekyll DIY
 ===
 
-DIY Approach to Jekyll. No Cruft, No Fuckery.
+DIY Approach to Jekyll. No Themes, No Cruft, No Fuckery.
 
+# Install
 
-## Getting Started
+  gem install jekyll bundler
+  bundle install
 
-`bundle exec jekyll serve`
+# Deploy
+
+  bundle exec jekyll serve
 
 
