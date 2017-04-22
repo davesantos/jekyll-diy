@@ -15,3 +15,9 @@ DIY Approach to Jekyll. No Themes, No Cruft, No Fuckery.
   bundle exec jekyll serve
 ```
 
+Or, deploy with [BrowerSync](https://www.browsersync.io/) using [Gulp JS](http://gulpjs.com/)
+```
+  npm install
+  gulp
+```
+
