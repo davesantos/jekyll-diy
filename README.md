@@ -3,19 +3,19 @@ Jekyll DIY
 
 DIY Approach to Jekyll. No Themes, No Cruft, No Fuckery.
 
-# Install
+## Install
 
 ```
   gem install jekyll bundler
   bundle install
 ```
-# Deploy
+## Deploy
 
 ```
   bundle exec jekyll serve
 ```
 
-Or, deploy with [BrowerSync](https://www.browsersync.io/) using [Gulp JS](http://gulpjs.com/)
+Or, deploy with [BrowerSync](https://www.browsersync.io/) using [Gulp](http://gulpjs.com/)
 ```
   npm install
   gulp
