@@ -1,8 +1,5 @@
-'use strict';
-
 var gulp = require('gulp');
 var browserSync = require('browser-sync');
-var changed = require('gulp-changed');
 var cleanCSS = require('gulp-clean-css');
 var cp = require('child_process');
 var prettify = require('gulp-prettify');
