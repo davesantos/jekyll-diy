@@ -1,6 +1,5 @@
 # Build settings
 
-# theme: minima
 include:
 markdown: kramdown
 permalink: :year/:title/
