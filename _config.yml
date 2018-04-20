@@ -5,7 +5,7 @@ include:
 markdown: kramdown
 permalink: :year/:title/
 
-gems:
+plugins:
   - jekyll-feed
   - jekyll-sitemap
 
