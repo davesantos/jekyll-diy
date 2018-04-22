@@ -31,6 +31,10 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function() {
   browserSync.reload();
 });
 
+gulp.task('travis', ['jekyll-build', 'js', 'prettify', 'minify'], function() {
+  console.log('complete');
+});
+
 gulp.task('js', function() {
   return gulp.src(paths.scripts + '/**/*.js')
     .pipe(gulp.dest(paths.build + '/' + paths.scripts))
