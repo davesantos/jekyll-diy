@@ -8,7 +8,7 @@ DIY Approach to Jekyll. No Themes, No Cruft, No Fuckery.
 ## Install
 
 ```sh
-  gem install jekyll bundler
+  gem install bundler
   bundle install
 ```
 ## Deploy
