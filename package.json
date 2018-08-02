@@ -1,18 +1,19 @@
 {
+  "name": "jekyll-diy",
+  "author": "Dave Santos",
   "devDependencies": {
-    "browser-sync": "^2.18.12",
+    "browser-sync": "^2.24.6",
     "child_process": "^1.0.2",
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.0.4",
+    "gulp": "^4.0.0",
+    "gulp-clean-css": "^3.9.4",
     "gulp-prettify": "0.5.0",
     "gulp-remove-empty-lines": "0.1.0",
     "gulp-sass": "4.0.1",
-    "gulp-shell": "0.6.5",
     "gulp-uglify": "3.0.0"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/davesantos/jekyll-diy.git"
+    "url": "git+https://github.com/davesantos/jekyll-diy.git"
   }
 }
