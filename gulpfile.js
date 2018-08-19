@@ -1,31 +1,31 @@
-'use strict';
+  'use strict';
 
-var gulp = require('gulp');
-var browserSync = require('browser-sync');
-var cleanCSS = require('gulp-clean-css');
-var exec = require('child_process').exec
-var prettify = require('gulp-prettify');
-var rmEmptyLines = require('gulp-remove-empty-lines');
-var sass = require('gulp-sass');
-var uglify = require('gulp-uglify');
+const gulp = require('gulp');
+const browserSync = require('browser-sync');
+const cleanCSS = require('gulp-clean-css');
+const exec = require('child_process').exec
+const prettify = require('gulp-prettify');
+const rmEmptyLines = require('gulp-remove-empty-lines');
+const sass = require('gulp-sass');
+const uglify = require('gulp-uglify');
 
-var paths = {
+const paths = {
   build: '_site',
   css: 'css',
   sass: ['css'],
   scripts: ['js']
 };
 
-var sassFiles = [
+const sassFiles = [
   'css/**/*.{css,scss,sass}',
   '_sass/**/*'
 ]
 
-var jsFiles = [
+const jsFiles = [
   'js/**/*.js'
 ];
 
-var jekyllFiles = [
+const jekyllFiles = [
   '*.{html,yml,md}',
   '_posts/*.{markdown,md}',
   '_layouts/*.html',
