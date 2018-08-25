@@ -1,6 +1,9 @@
-# Build settings
+#------------------------------------------------------------
+#
+#  Config Settings
+#
+#------------------------------------------------------------
 
-include:
 markdown: kramdown
 permalink: :year/:title/
 
@@ -12,8 +15,6 @@ include:
   - .htaccess
 
 exclude:
-  - Gemfile
-  - Gemfile.lock
   - LICENSE
   - README
   - Rakefile
