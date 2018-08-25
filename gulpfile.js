@@ -1,13 +1,13 @@
-  'use strict';
+'use strict';
 
-const gulp = require('gulp');
-const browserSync = require('browser-sync');
-const cleanCSS = require('gulp-clean-css');
-const exec = require('child_process').exec
-const prettify = require('gulp-prettify');
-const rmEmptyLines = require('gulp-remove-empty-lines');
-const sass = require('gulp-sass');
-const uglify = require('gulp-uglify');
+let gulp = require('gulp');
+let browserSync = require('browser-sync');
+let cleanCSS = require('gulp-clean-css');
+let exec = require('child_process').exec
+let prettify = require('gulp-prettify');
+let rmEmptyLines = require('gulp-remove-empty-lines');
+let sass = require('gulp-sass');
+let uglify = require('gulp-uglify');
 
 const paths = {
   build: '_site',
@@ -27,9 +27,9 @@ const jsFiles = [
 
 const jekyllFiles = [
   '*.{html,yml,md}',
-  '_posts/*.{markdown,md}',
-  '_layouts/*.html',
-  '_includes/*.html'
+  '_posts/**/*',
+  '_layouts/**/*',
+  '_includes/**/*'
 ];
 
 function errorHandler(error) {
@@ -82,7 +82,6 @@ gulp.task('minify', function() {
     .pipe(gulp.dest(paths.build + '/' + paths.css))
 });
 
-
 gulp.task('serve', function(done) {
 
  browserSync.init({
@@ -91,10 +90,11 @@ gulp.task('serve', function(done) {
    }
  });
 
- gulp.watch(sassFiles, gulp.parallel('jekyll-rebuild')).on('change', browserSync.reload);
- gulp.watch(jsFiles, gulp.parallel('js')).on('change', browserSync.reload);
- gulp.watch(jekyllFiles, gulp.parallel('jekyll-rebuild')).on('all', browserSync.reload);
- return console.log('Serve function ran'), done();
+  gulp.watch(jekyllFiles).on('all', gulp.series('jekyll-build'));
+  gulp.watch(sassFiles).on('change', gulp.series('jekyll-build'));
+  gulp.watch(jsFiles).on('change', gulp.series('js'));
+  gulp.watch(paths.build).on('all', browserSync.reload);
+  return console.log('Initializing Server...'), done();
 });
 
 gulp.task('travis', gulp.series(gulp.parallel('jekyll-build', 'js', 'prettify', 'minify'), function(done) {
