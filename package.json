@@ -1,6 +1,6 @@
 {
   "name": "jekyll-diy",
-  "author": "Dave Santos",
+  "author": "Dave Santos <info@davesantos.com>",
   "devDependencies": {
     "browser-sync": "^2.24.6",
     "child_process": "^1.0.2",
@@ -9,7 +9,7 @@
     "gulp-prettify": "0.5.0",
     "gulp-remove-empty-lines": "0.1.0",
     "gulp-sass": "4.0.1",
-    "gulp-uglify": "3.0.0"
+    "gulp-uglify": "^3.0.1"
   },
   "dependencies": {
     "debug": "^3.1.0",
@@ -19,5 +19,14 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/davesantos/jekyll-diy.git"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/davesantos/jekyll-diy/issues"
+  },
+  "homepage": "https://github.com/davesantos/jekyll-diy#readme",
+  "main": "gulpfile.js",
+  "keywords": [
+    "jekyll",
+    "jekyll boilerplate"
+  ]
 }
