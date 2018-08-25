@@ -13,13 +13,14 @@ DIY Approach to Jekyll. No Themes, No Cruft, No Fuckery.
   gem install bundler
   bundle install
 ```
-### Install Packages from `package.json`
+Install Packages from `package.json`
 ```
   npm install
 ```
 
 ## Deploy
 
+Old fashion method
 ```sh
   bundle exec jekyll serve
 ```
