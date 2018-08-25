@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/davesantos/jekyll-diy.svg?branch=master)](https://travis-ci.org/davesantos/jekyll-diy)
+[![devDependencies Status](https://david-dm.org/davesantos/jekyll-diy/dev-status.svg)](https://david-dm.org/davesantos/jekyll-diy?type=dev)
+
 
 Jekyll DIY
 ===
