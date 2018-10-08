@@ -5,7 +5,7 @@
 Jekyll DIY
 ===
 
-DIY Approach to Jekyll. No Themes, No Cruft, No Fuckery.
+The most bare minimal DIY approach to Jekyll. No Themes, No cruft, No extra fuckery.
 
 ## Install
 
