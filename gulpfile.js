@@ -1,13 +1,13 @@
 'use strict';
 
-let gulp = require('gulp');
-let browserSync = require('browser-sync');
-let cleanCSS = require('gulp-clean-css');
-let exec = require('child_process').exec
-let prettify = require('gulp-prettify');
-let rmEmptyLines = require('gulp-remove-empty-lines');
-let sass = require('gulp-sass');
-let uglify = require('gulp-uglify');
+const gulp = require('gulp');
+const browserSync = require('browser-sync');
+const cleanCSS = require('gulp-clean-css');
+const exec = require('child_process').exec
+const prettify = require('gulp-prettify');
+const rmEmptyLines = require('gulp-remove-empty-lines');
+const sass = require('gulp-sass');
+const uglify = require('gulp-uglify');
 
 const paths = {
   build: '_site',
@@ -58,6 +58,15 @@ gulp.task('js', function() {
     }));
 });
 
+gulp.task('sass', gulp.series('jekyll-build', function() {
+  return gulp.src(paths.sass + '/*.{sass,scss}')
+    .pipe(sass({
+       includePaths: ['node_modules']
+    }).on('error', errorHandler))
+    .pipe(gulp.dest(paths.build + '/' + paths.css))
+    .pipe(gulp.dest(paths.css))
+}));
+
 gulp.task('prettify', gulp.series('jekyll-build', function() {
   return gulp.src([paths.build + '/**/*.html'])
     .pipe(prettify({
@@ -91,13 +100,13 @@ gulp.task('serve', function(done) {
  });
 
   gulp.watch(jekyllFiles).on('all', gulp.series('jekyll-build'));
-  gulp.watch(sassFiles).on('change', gulp.series('jekyll-build'));
+  gulp.watch(sassFiles).on('change', gulp.series('sass'));
   gulp.watch(jsFiles).on('change', gulp.series('js'));
   gulp.watch(paths.build).on('all', browserSync.reload);
   return console.log('Initializing Server...'), done();
 });
 
-gulp.task('travis', gulp.series(gulp.parallel('jekyll-build', 'js', 'prettify', 'minify'), function(done) {
+gulp.task('travis', gulp.series(gulp.parallel('sass', 'js', 'prettify', 'minify'), function(done) {
   return console.log('complete'), done();
 }));
 
