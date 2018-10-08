@@ -16,8 +16,6 @@
     "node-sass": "^4.9.3"
   },
   "dependencies": {
-    "debug": "^3.1.0",
-    "lodash": "^4.17.10",
     "normalize.css": "^8.0.0"
   },
   "babel": {
