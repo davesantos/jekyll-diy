@@ -2,6 +2,9 @@
   "name": "jekyll-diy",
   "author": "Dave Santos <info@davesantos.com>",
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
     "browser-sync": "^2.24.6",
     "child_process": "^1.0.2",
     "gulp": "^4.0.0",
@@ -14,6 +17,11 @@
   "dependencies": {
     "debug": "^3.1.0",
     "lodash": "^4.17.10"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
   },
   "license": "MIT",
   "repository": {
